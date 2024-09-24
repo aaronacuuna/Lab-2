@@ -47,7 +47,8 @@ function App() {
       adminRoutes = (
         <>
           <Route path="/users" exact={true} element={<PrivateRoute><UserListAdmin /></PrivateRoute>} />
-          <Route path="/users/:username" exact={true} element={<PrivateRoute><UserEditAdmin /></PrivateRoute>} />          
+          <Route path="/users/:username" exact={true} element={<PrivateRoute><UserEditAdmin /></PrivateRoute>} />  
+          <Route path="/developers" element={<DeveloperList />} />        
         </>)
     }
     if (role === "PLAYER") {
@@ -70,7 +71,6 @@ function App() {
         {/* <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}        
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/developers" element={<DeveloperList />} />
       </>
     )
   }
